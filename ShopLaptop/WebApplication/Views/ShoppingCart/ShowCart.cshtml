@@ -1,0 +1,67 @@
+﻿@using WebApplication.Models
+@model IEnumerable<WebApplication.ServiceReferenceShopLaptop.SanPham>
+
+@{
+    ViewBag.Title = "Giỏ hàng của bạn";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $('.RemoveLink').click(function () {
+            var x = $(this).attr("data-id");
+            if (confirm("Đối tượng sẽ bị xóa.Bạn có muốn không ?")) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("RemoveCart", "ShoppingCart")',
+                    data: { id: x }
+                });
+                $("#row-" + x).remove();
+            }
+        })
+    })
+</script>
+<div class="content_right">
+    <div class="header-center"> THÔNG TIN GIỎ HÀNG </div>
+    @if (Session["Cart"] != null)
+    {
+        var _CartSession = (List<ShopLaptop>)Session["Cart"];
+        var Total = _CartSession.Sum(m => m.SoLuong * m.DonGia);
+        <table style="border: 1px #d0e9fd solid; border-radius: 5px; width: 768px">
+            <thead>
+                <tr style="">
+                    <td>Sản Phẩm</td>
+                    <td>Đơn Giá</td>
+                    <td>Số Lượng</td>
+                    <td>Thành Tiền</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in _CartSession)
+                {
+                    var SubTotal = item.SoLuong * item.DonGia;
+                    <tr id="row-@item.MaSP">
+                        <td>@item.MaSP</td>
+                        <td>@string.Format("{0:0,0 VNĐ}", item.DonGia).Replace(",", ".")</td>
+                        <td>@item.SoLuong</td>
+                        <td> @string.Format("{0:0,0 VNĐ}", SubTotal).Replace(",", ".")</td>
+                        <td><a href="RemoveCart/@item.MaSP" class="RemoveLink" data-id="@item.MaSP">Xóa</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div style="border-top: solid 2px #0094ff; margin:10px; padding:10px; font-size:20px; font-weight:bold;">
+            Tổng Tiền :@string.Format("{0:0,0 VNĐ}", @Total).Replace(",", ".")
+        </div>
+        <a href="@Url.Action("Create","ShoppingCart")" class="linkButton1">Đặt Hàng</a>
+        <a href="@Url.Action("Default","Default")" class="linkButton1">Trở về Trang Chủ</a>
+    }
+    else
+    {
+        <h1>Giỏ hàng trống</h1>
+        <p>
+            <a href="@Url.Action("Default","Default")" class="linkButton1">Trở về Trang Chủ</a>
+        </p>
+
+    }
+</div>

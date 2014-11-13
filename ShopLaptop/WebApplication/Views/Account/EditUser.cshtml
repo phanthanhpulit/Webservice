@@ -1,0 +1,61 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.KhachHang
+
+@{
+    ViewBag.Title = "Sửa thông tin người dùng";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<div class="content_right">
+    <div class="header-center"> SỬA THÔNG TIN NGƯỜI DÙNG </div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td colspan="2">Tên đăng nhập:</td>
+                    <td colspan="2">@Html.TextBox("txtusername", @Model.username)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Mật khẩu:</td>
+                    <td colspan="2">@Html.Password("txtpassword", @Model.password)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Họ tên:</td>
+                    <td colspan="2">@Html.TextBox("txthoten", @Model.hoten)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Giới tính nam:</td>
+                    <td colspan="2">
+                        <select name="txtgioitinh">
+                            @if (ViewBag.gioitinh == "Nam")
+                            {
+                                <option selected="selected" value="nam">Nam</option>
+                                <option value="nu">Nữ</option>
+                            }
+                            else
+                            {
+                                <option value="nam">Nam</option>
+                                <option selected="selected" value="nu">Nữ</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ngày sinh:</td>
+                    <td colspan="2">@Html.TextBox("txtnamsinh", String.Format("{0:dd-MM-yyyy}", @Model.namsinh.Value), new { @class = "txtnamsinh" })</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Địa chỉ:</td>
+                    <td colspan="2">@Html.TextBox("txtdiachi", @Model.diachi)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Số điện thoại:</td>
+                    <td colspan="2">@Html.TextBox("txtsodienthoai", @Model.sodienthoai)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="Them" value="Lưu" /></td>
+                    <td><input type="reset" name="reset" value="Nhập lại" /></td>
+                </tr>
+            </table>
+        }
+</div>

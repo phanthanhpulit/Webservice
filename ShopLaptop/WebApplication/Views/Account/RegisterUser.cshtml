@@ -1,0 +1,58 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.KhachHang
+
+@{
+    ViewBag.Title = "Đăng ký người dùng mới";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<div class="content_right">
+    <div class="header-center"> ĐĂNG KÝ NGƯỜI DÙNG MỚI</div>
+    @using (Html.BeginForm())
+    {
+        @*Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)*@
+        <h2 style="text-align: center"> MỜI BẠN NHẬP ĐỦ THÔNG TIN BÊN DƯỚI </h2>
+        <table>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2">@Html.Label("Tên đăng nhập ")</td>
+                <td colspan ="2">@Html.TextBox("txtusername")</td>
+            </tr>
+            <tr>
+                 <td colspan="2">@Html.Label("Mật khẩu ")</td>
+                 <td colspan="2">@Html.Password("txtpassword")</td>
+            </tr>
+            <tr>
+                <td colspan="2">@Html.Label("Họ và tên ")</td>
+                <td colspan="2">@Html.TextBox("txthoten")</td>
+            </tr>
+            <tr>
+                <td colspan="2">@Html.Label("Giới tính ")</td>
+                <td>
+                    <select name="txtgioitinh">
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nữ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">@Html.Label("Năm sinh ")</td>
+                <td colspan="2">@Html.TextBox("txtnamsinh")</td>
+            </tr>
+            <tr>
+                <td colspan="2">@Html.Label("Địa chỉ ")</td>
+                <td colspan="2">@Html.TextBox("txtdiachi")</td>
+            </tr>
+            <tr>
+                <td colspan="2">@Html.Label("Số điện thoại ")</td>
+                <td colspan="2">@Html.TextBox("txtsodienthoai")</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="submit" name="Them" value="Đăng ký" /><input type="reset" name="reset" value="Nhập lại" /></td>
+            </tr>    
+                        
+        </table>
+    }
+</div>

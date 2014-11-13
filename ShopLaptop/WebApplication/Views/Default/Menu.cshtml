@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebApplication.ServiceReferenceShopLaptop.LoaiSP>
+
+<ul id="sidebarmenu1">
+    @foreach (var item in Model)
+    {
+
+        <li>
+            <a href="/Default/Danhmuc?loai=@Html.DisplayFor(p=>item.maloai).ToString().Trim()">@Html.DisplayFor(p => item.tenloai)</a>
+        </li>
+
+    }
+</ul>

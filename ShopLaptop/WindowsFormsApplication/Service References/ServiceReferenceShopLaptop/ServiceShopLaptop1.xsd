@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+  <xs:import schemaLocation="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="findAllSanPham">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllSanPhamResult" nillable="true" type="q1:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findSanPhamResult" nillable="true" type="q2:SanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findSanPham1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findSanPham1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findSanPham1Result" nillable="true" type="q3:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gia" type="xs:int" />
+        <xs:element minOccurs="0" name="hinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CPU" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RAM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HDD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VGA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="display" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wireless" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="battery" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="weight" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="baohanh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chitiet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemSanPhamResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaSanPhamResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaSanPham1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gia" type="xs:int" />
+        <xs:element minOccurs="0" name="hinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CPU" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RAM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HDD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VGA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="display" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wireless" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="battery" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="weight" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="baohanh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chitiet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaSanPham1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaSanPham1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gia" type="xs:int" />
+        <xs:element minOccurs="0" name="hinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CPU" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RAM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HDD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VGA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="display" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wireless" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="battery" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="weight" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="baohanh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chitiet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaSanPhamResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductNewSanPham">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductNewSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="ProductNewSanPhamResult" nillable="true" type="q4:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductLoai">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductLoaiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="ProductLoaiResult" nillable="true" type="q5:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiSP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayMaLoaiSPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllLoaiSP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllLoaiSPResult" nillable="true" type="q6:ArrayOfLoaiSP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findLoaiSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findLoaiSPResult" nillable="true" type="q7:LoaiSP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemLoaiSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tenloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemLoaiSPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaLoaiSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaLoaiSPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaLoaiSP1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tenloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaLoaiSP1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaLoaiSP1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaLoaiSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tenloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaLoaiSPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="displayLoaiSP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="displayLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="displayLoaiSPResult" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HienthiLoaiSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="temp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HienthiLoaiSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HienthiLoaiSPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiLSP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiLSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayMaLoaiLSPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllKhachHang">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllKhachHangResult" nillable="true" type="q9:ArrayOfKhachHang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findKhachHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findKhachHangResult" nillable="true" type="q10:KhachHang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemKhachHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hoten" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gioitinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="namsinh" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="diachi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sodienthoai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quyenhan" type="xs:boolean" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemKhachHangResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaKhachHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaKhachHangResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaKhangHang1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hoten" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gioitinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="namsinh" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="diachi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sodienthoai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quyenhan" type="xs:boolean" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaKhangHang1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaKhangHang1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaKhachHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hoten" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gioitinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="namsinh" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="diachi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sodienthoai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quyenhan" type="xs:boolean" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaKhachHangResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ktdangnhapKhachHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ktdangnhapKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ktdangnhapKhachHangResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ktdangnhapKhachHang1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtusername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ktdangnhapKhachHang1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ktdangnhapKhachHang1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findLoginKhachHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findLoginKhachHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findLoginKhachHangResult" nillable="true" type="q11:KhachHang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllHoaDon">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllHoaDonResult" nillable="true" type="q12:ArrayOfHoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findHoaDonResult" nillable="true" type="q13:HoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngaylap" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ngaythanhtoan" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="trangthai" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemHoaDonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaHoaDonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaHoaDon1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngaylap" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ngaythanhtoan" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="trangthai" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaHoaDon1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaHoaDon1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngaylap" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ngaythanhtoan" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="trangthai" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaHoaDonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiHD">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiHDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayMaLoaiHDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllChitietHD">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllChitietHDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllChitietHDResult" nillable="true" type="q14:ArrayOfChitietHD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemChitietHD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+        <xs:element minOccurs="0" name="gia" type="xs:int" />
+        <xs:element minOccurs="0" name="thanhtien" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemChitietHDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemChitietHDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaChitietHD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+        <xs:element minOccurs="0" name="gia" type="xs:int" />
+        <xs:element minOccurs="0" name="thanhtien" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaChitietHDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaChitietHDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findChitietHD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findChitietHDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findChitietHDResult" nillable="true" type="q15:ArrayOfChitietHD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllPhieuNhap">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllPhieuNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllPhieuNhapResult" nillable="true" type="q16:ArrayOfPhieuNhap" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findPhieuNhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findPhieuNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findPhieuNhapResult" nillable="true" type="q17:PhieuNhap" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemPhieuNhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemPhieuNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemPhieuNhapResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaPhieuNhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaPhieuNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaPhieuNhapResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaPhieuNhap1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaPhieuNhap1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaPhieuNhap1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaPhieuNhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaPhieuNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaPhieuNhapResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiPN">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayMaLoaiPNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayMaLoaiPNResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllKho">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllKhoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllKhoResult" nillable="true" type="q18:ArrayOfKho" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findKho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ngay1" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ngay2" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findKhoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findKhoResult" nillable="true" type="q19:ArrayOfKho" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemKho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemKhoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemKhoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemKho1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemKho1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemKho1Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThongKeTK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ngay1" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ngay2" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThongKeTKResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="ThongKeTKResult" nillable="true" type="q20:ArrayOfKho" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllChitietPN">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllChitietPNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WCFService" minOccurs="0" name="findAllChitietPNResult" nillable="true" type="q21:ArrayOfChitietPN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemChitietPN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemChitietPNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemChitietPNResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaChitietPN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mapn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaChitietPNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaChitietPNResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

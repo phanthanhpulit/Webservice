@@ -1,0 +1,11 @@
+﻿@using WebApplication.Models
+@{
+    Layout = null;
+}
+
+<div class="box_cart">
+    <div class="header-center"> GIỎ HÀNG </div>
+    <a href="/ShoppingCart/ShowCart"><div class="box_image"><img src="..\..\Images\cartshopping.png"></div></a>
+    <a>Số sản phẩm: @Model<br /></a>
+    <a>@Html.ActionLink("Chi tiết giỏ hàng", "ShowCart", "ShoppingCart")</a>
+</div>

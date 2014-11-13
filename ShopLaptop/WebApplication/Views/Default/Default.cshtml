@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication.ServiceReferenceShopLaptop.SanPham>
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+<div class="content_right">
+    <div class="header-center">SẢN PHẨM MỚI NHẤT</div>
+    <div>
+        @foreach (var p in Model)
+        {
+            <div class="product-container">
+                <a href="/Default/ChitietSP?masp=@Html.DisplayFor(item => p.masp).ToString().Trim()"><div class="product-container-image"><img src="@Html.DisplayFor(item => p.hinh)" /></div></a>
+                <a href="/Default/ChitietSP?masp=@Html.DisplayFor(item => p.masp).ToString().Trim()">@Html.DisplayFor(item => p.tensp)</a>
+                <div style="color:#FF0000">Giá: @string.Format("{0:0,0 VNĐ}", p.gia).Replace(",", ".")</div>
+                <a href="/Default/Chitietsanpham?masp=@Html.DisplayFor(item => p.masp).ToString().Trim()"></a>
+                <button name="chitiet" value="Chi tiết">@Html.ActionLink("Chi tiết", "ChitietSP", "Default", new { masp = p.masp.Trim() }, null)</button>
+                <button name="chonmua" value="Chọn mua">@Html.ActionLink("Chọn mua", "AddToCart", "ShoppingCart", new { id = p.masp.Trim(), gia = p.gia }, null)</button>
+             </div>
+        }
+        <div class="clear"></div>
+        <div>@{Html.RenderAction("PhanTrang", "PageList", new { currentpage = "Default/Default?", totalpages = ViewBag.TotalPages });} </div>
+        <div style="text-align:right; padding:6px; color:#FF3333; font-size:14px; height:22px"><a href="#top">>>Về đầu trang</a></div>
+    </div>
+</div>  
+@{
+    var message = TempData["AlertMessageLogin"] ?? string.Empty;
+}
+@{
+    var message1 = TempData["AlertMessageRegister"] ?? string.Empty;
+}
+@{
+    var message2 = TempData["AlertMessageEdit"] ?? string.Empty;
+}
+<script type="text/javascript">
+    var message = '@message';
+    if (message)
+        alert(message);
+</script>
+<script type="text/javascript">
+    var message1 = '@message1';
+    if(message1)
+        alert(message1);
+</script>
+<script type="text/javascript">
+    var message2 = '@message2';
+    if(message2)
+        alert(message2);
+</script>
+
+
+

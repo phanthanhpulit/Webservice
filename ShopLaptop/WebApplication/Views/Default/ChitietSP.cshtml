@@ -1,0 +1,63 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.SanPham
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<div class="content_right">
+    <div class="box_detail_top">
+        <div class="header-center"> THÔNG TIN SẢN PHẨM </div>
+        <div class="box_detail_image">
+            <img src="@Html.Raw(Model.hinh)" />
+        </div>
+        <div class="box_detail_top_content">
+            <p>@Html.Raw(Model.tensp)</p>
+            <p>Giá: @string.Format("{0:0,0 VNĐ}", Model.gia).Replace(",", ".")</p>
+        </div>
+    </div>
+    <div class="box_detail_center">
+        <div class="header-center"> THÔNG TIN CHI TIẾT SẢN PHẨM </div>
+        <table>
+            <tr>
+                <td> CPU</td>
+                <td> @Html.Raw(Model.CPU)</td>
+            </tr>
+            <tr>
+                <td> RAM</td>
+                <td> @Html.Raw(Model.RAM)</td>
+            </tr>
+            <tr>
+                <td> Ổ cứng</td>
+                <td> @Html.Raw(Model.HDD)</td>
+            </tr>
+            <tr>
+                <td> VGA</td>
+                <td> @Html.Raw(Model.VGA)</td>
+            </tr>
+            <tr>
+                <td> Màn hình</td>
+                <td> @Html.Raw(Model.display)</td>
+            </tr>
+            <tr>
+                <td> Wireless</td>
+                <td> @Html.Raw(Model.wireless)</td>
+            </tr>
+            <tr>
+                <td> Pin</td>
+                <td> @Html.Raw(Model.battery)</td>
+            </tr>
+            <tr>
+                <td> Trọng lượng</td>
+                <td> @Html.Raw(Model.weight)</td>
+            </tr>
+            <tr>
+                <td> Bảo hành</td>
+                <td> @Html.Raw(Model.baohanh)</td>
+            </tr>
+        </table>
+    </div>
+    <div class="box_detail_bottom">
+        <div class="header-center"> ĐÁNH GIÁ CHI TIẾT SẢN PHẨM </div>
+        <p> @Html.Raw(Model.chitiet)</p>
+    </div>
+</div>

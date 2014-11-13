@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceShopLaptop" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceShopLaptop_findAllSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findSanPham1_InputMessage">
+    <wsdl:part name="parameters" element="tns:findSanPham1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findSanPham1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findSanPham1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaSanPham1_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaSanPham1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaSanPham1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaSanPham1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ProductNewSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductNewSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ProductNewSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductNewSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ProductLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ProductLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaLoaiSP1_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaLoaiSP1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaLoaiSP1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaLoaiSP1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_displayLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:displayLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_displayLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:displayLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_HienthiLoaiSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:HienthiLoaiSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_HienthiLoaiSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HienthiLoaiSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiLSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiLSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiLSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiLSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:findKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaKhangHang1_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaKhangHang1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaKhangHang1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaKhangHang1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ktdangnhapKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:ktdangnhapKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ktdangnhapKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ktdangnhapKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ktdangnhapKhachHang1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ktdangnhapKhachHang1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ktdangnhapKhachHang1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ktdangnhapKhachHang1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findLoginKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findLoginKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaHoaDon1_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaHoaDon1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaHoaDon1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaHoaDon1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiHD_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiHD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiHD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllChitietHD_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllChitietHD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllChitietHD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllChitietHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemChitietHD_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemChitietHD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemChitietHD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemChitietHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaChitietHD_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaChitietHD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaChitietHD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaChitietHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findChitietHD_InputMessage">
+    <wsdl:part name="parameters" element="tns:findChitietHD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findChitietHD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findChitietHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaPhieuNhap1_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaPhieuNhap1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_XoaPhieuNhap1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaPhieuNhap1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiPN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_LayMaLoaiPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:findKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemKho1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemKho1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemKho1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemKho1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThongKeTK_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongKeTK" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThongKeTK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongKeTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllChitietPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllChitietPN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_findAllChitietPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllChitietPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemChitietPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemChitietPN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_ThemChitietPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemChitietPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaChitietPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaChitietPN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopLaptop_SuaChitietPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaChitietPNResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceShopLaptop">
+    <wsdl:operation name="findAllSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllSanPham" message="tns:IServiceShopLaptop_findAllSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllSanPhamResponse" message="tns:IServiceShopLaptop_findAllSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findSanPham" message="tns:IServiceShopLaptop_findSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findSanPhamResponse" message="tns:IServiceShopLaptop_findSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findSanPham1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findSanPham1" message="tns:IServiceShopLaptop_findSanPham1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findSanPham1Response" message="tns:IServiceShopLaptop_findSanPham1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemSanPham" message="tns:IServiceShopLaptop_ThemSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemSanPhamResponse" message="tns:IServiceShopLaptop_ThemSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaSanPham" message="tns:IServiceShopLaptop_XoaSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaSanPhamResponse" message="tns:IServiceShopLaptop_XoaSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaSanPham1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaSanPham1" message="tns:IServiceShopLaptop_XoaSanPham1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaSanPham1Response" message="tns:IServiceShopLaptop_XoaSanPham1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaSanPham" message="tns:IServiceShopLaptop_SuaSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaSanPhamResponse" message="tns:IServiceShopLaptop_SuaSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductNewSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ProductNewSanPham" message="tns:IServiceShopLaptop_ProductNewSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ProductNewSanPhamResponse" message="tns:IServiceShopLaptop_ProductNewSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ProductLoai" message="tns:IServiceShopLaptop_ProductLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ProductLoaiResponse" message="tns:IServiceShopLaptop_ProductLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiSP" message="tns:IServiceShopLaptop_LayMaLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiSPResponse" message="tns:IServiceShopLaptop_LayMaLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllLoaiSP" message="tns:IServiceShopLaptop_findAllLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllLoaiSPResponse" message="tns:IServiceShopLaptop_findAllLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findLoaiSP" message="tns:IServiceShopLaptop_findLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findLoaiSPResponse" message="tns:IServiceShopLaptop_findLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemLoaiSP" message="tns:IServiceShopLaptop_ThemLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemLoaiSPResponse" message="tns:IServiceShopLaptop_ThemLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaLoaiSP" message="tns:IServiceShopLaptop_XoaLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaLoaiSPResponse" message="tns:IServiceShopLaptop_XoaLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaLoaiSP1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaLoaiSP1" message="tns:IServiceShopLaptop_XoaLoaiSP1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaLoaiSP1Response" message="tns:IServiceShopLaptop_XoaLoaiSP1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaLoaiSP" message="tns:IServiceShopLaptop_SuaLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaLoaiSPResponse" message="tns:IServiceShopLaptop_SuaLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="displayLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/displayLoaiSP" message="tns:IServiceShopLaptop_displayLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/displayLoaiSPResponse" message="tns:IServiceShopLaptop_displayLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HienthiLoaiSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/HienthiLoaiSP" message="tns:IServiceShopLaptop_HienthiLoaiSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/HienthiLoaiSPResponse" message="tns:IServiceShopLaptop_HienthiLoaiSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiLSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiLSP" message="tns:IServiceShopLaptop_LayMaLoaiLSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiLSPResponse" message="tns:IServiceShopLaptop_LayMaLoaiLSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllKhachHang" message="tns:IServiceShopLaptop_findAllKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllKhachHangResponse" message="tns:IServiceShopLaptop_findAllKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findKhachHang" message="tns:IServiceShopLaptop_findKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findKhachHangResponse" message="tns:IServiceShopLaptop_findKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemKhachHang" message="tns:IServiceShopLaptop_ThemKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemKhachHangResponse" message="tns:IServiceShopLaptop_ThemKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaKhachHang" message="tns:IServiceShopLaptop_XoaKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaKhachHangResponse" message="tns:IServiceShopLaptop_XoaKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaKhangHang1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaKhangHang1" message="tns:IServiceShopLaptop_XoaKhangHang1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaKhangHang1Response" message="tns:IServiceShopLaptop_XoaKhangHang1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaKhachHang" message="tns:IServiceShopLaptop_SuaKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaKhachHangResponse" message="tns:IServiceShopLaptop_SuaKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ktdangnhapKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ktdangnhapKhachHang" message="tns:IServiceShopLaptop_ktdangnhapKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ktdangnhapKhachHangResponse" message="tns:IServiceShopLaptop_ktdangnhapKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ktdangnhapKhachHang1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ktdangnhapKhachHang1" message="tns:IServiceShopLaptop_ktdangnhapKhachHang1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ktdangnhapKhachHang1Response" message="tns:IServiceShopLaptop_ktdangnhapKhachHang1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLoginKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findLoginKhachHang" message="tns:IServiceShopLaptop_findLoginKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findLoginKhachHangResponse" message="tns:IServiceShopLaptop_findLoginKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllHoaDon" message="tns:IServiceShopLaptop_findAllHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllHoaDonResponse" message="tns:IServiceShopLaptop_findAllHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findHoaDon" message="tns:IServiceShopLaptop_findHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findHoaDonResponse" message="tns:IServiceShopLaptop_findHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemHoaDon" message="tns:IServiceShopLaptop_ThemHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemHoaDonResponse" message="tns:IServiceShopLaptop_ThemHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaHoaDon" message="tns:IServiceShopLaptop_XoaHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaHoaDonResponse" message="tns:IServiceShopLaptop_XoaHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaHoaDon1" message="tns:IServiceShopLaptop_XoaHoaDon1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaHoaDon1Response" message="tns:IServiceShopLaptop_XoaHoaDon1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaHoaDon" message="tns:IServiceShopLaptop_SuaHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaHoaDonResponse" message="tns:IServiceShopLaptop_SuaHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiHD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiHD" message="tns:IServiceShopLaptop_LayMaLoaiHD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiHDResponse" message="tns:IServiceShopLaptop_LayMaLoaiHD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllChitietHD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllChitietHD" message="tns:IServiceShopLaptop_findAllChitietHD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllChitietHDResponse" message="tns:IServiceShopLaptop_findAllChitietHD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemChitietHD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemChitietHD" message="tns:IServiceShopLaptop_ThemChitietHD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemChitietHDResponse" message="tns:IServiceShopLaptop_ThemChitietHD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaChitietHD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaChitietHD" message="tns:IServiceShopLaptop_SuaChitietHD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaChitietHDResponse" message="tns:IServiceShopLaptop_SuaChitietHD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findChitietHD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findChitietHD" message="tns:IServiceShopLaptop_findChitietHD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findChitietHDResponse" message="tns:IServiceShopLaptop_findChitietHD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllPhieuNhap" message="tns:IServiceShopLaptop_findAllPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllPhieuNhapResponse" message="tns:IServiceShopLaptop_findAllPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findPhieuNhap" message="tns:IServiceShopLaptop_findPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findPhieuNhapResponse" message="tns:IServiceShopLaptop_findPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemPhieuNhap" message="tns:IServiceShopLaptop_ThemPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemPhieuNhapResponse" message="tns:IServiceShopLaptop_ThemPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaPhieuNhap" message="tns:IServiceShopLaptop_XoaPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaPhieuNhapResponse" message="tns:IServiceShopLaptop_XoaPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaPhieuNhap1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaPhieuNhap1" message="tns:IServiceShopLaptop_XoaPhieuNhap1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/XoaPhieuNhap1Response" message="tns:IServiceShopLaptop_XoaPhieuNhap1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaPhieuNhap" message="tns:IServiceShopLaptop_SuaPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaPhieuNhapResponse" message="tns:IServiceShopLaptop_SuaPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiPN" message="tns:IServiceShopLaptop_LayMaLoaiPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/LayMaLoaiPNResponse" message="tns:IServiceShopLaptop_LayMaLoaiPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllKho" message="tns:IServiceShopLaptop_findAllKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllKhoResponse" message="tns:IServiceShopLaptop_findAllKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findKho" message="tns:IServiceShopLaptop_findKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findKhoResponse" message="tns:IServiceShopLaptop_findKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemKho" message="tns:IServiceShopLaptop_ThemKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemKhoResponse" message="tns:IServiceShopLaptop_ThemKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemKho1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemKho1" message="tns:IServiceShopLaptop_ThemKho1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemKho1Response" message="tns:IServiceShopLaptop_ThemKho1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongKeTK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThongKeTK" message="tns:IServiceShopLaptop_ThongKeTK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThongKeTKResponse" message="tns:IServiceShopLaptop_ThongKeTK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllChitietPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllChitietPN" message="tns:IServiceShopLaptop_findAllChitietPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/findAllChitietPNResponse" message="tns:IServiceShopLaptop_findAllChitietPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemChitietPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemChitietPN" message="tns:IServiceShopLaptop_ThemChitietPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/ThemChitietPNResponse" message="tns:IServiceShopLaptop_ThemChitietPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaChitietPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaChitietPN" message="tns:IServiceShopLaptop_SuaChitietPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopLaptop/SuaChitietPNResponse" message="tns:IServiceShopLaptop_SuaChitietPN_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceShopLaptop" type="tns:IServiceShopLaptop">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findAllSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSanPham1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findSanPham1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSanPham1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaSanPham1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductNewSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ProductNewSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ProductLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/LayMaLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaLoaiSP1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaLoaiSP1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/displayLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HienthiLoaiSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/HienthiLoaiSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiLSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/LayMaLoaiLSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaKhangHang1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaKhangHang1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ktdangnhapKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ktdangnhapKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ktdangnhapKhachHang1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ktdangnhapKhachHang1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLoginKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findLoginKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaHoaDon1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiHD">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/LayMaLoaiHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllChitietHD">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllChitietHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemChitietHD">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemChitietHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaChitietHD">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaChitietHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findChitietHD">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findChitietHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaPhieuNhap1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/XoaPhieuNhap1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiPN">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/LayMaLoaiPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemKho1">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemKho1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThongKeTK">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThongKeTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllChitietPN">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/findAllChitietPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemChitietPN">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/ThemChitietPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaChitietPN">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopLaptop/SuaChitietPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceShopLaptop">
+    <wsdl:port name="BasicHttpBinding_IServiceShopLaptop" binding="tns:BasicHttpBinding_IServiceShopLaptop">
+      <soap:address location="http://localhost:38836/ServiceShopLaptop.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

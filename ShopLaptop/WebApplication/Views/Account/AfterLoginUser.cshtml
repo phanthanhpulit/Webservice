@@ -1,0 +1,19 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.KhachHang
+@{
+    Layout = null;
+}
+
+<div class="box_search">
+    <div class="header-center"> ĐĂNG NHẬP </div>
+    <br />
+    <a style="text-align:center">Xin chào: </a>
+    @if (Session["LogedUserFullname"] != null)
+    {
+        <text>
+            @Session["LogedUserFullname"].ToString()
+        </text>
+    }
+    <br />
+    <button value="Logout" name="Logout">@Html.ActionLink("Đăng xuất", "LogoutUser")</button>
+    <button value="Profile" name="Profile">@Html.ActionLink("Thông tin tài khoản", "ProfileUser", new { id = @Session["LogedUserID"].ToString() }, null)</button>
+</div>

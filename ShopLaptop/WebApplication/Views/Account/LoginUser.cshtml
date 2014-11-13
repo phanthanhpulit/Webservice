@@ -1,0 +1,52 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.KhachHang
+
+@{
+    Layout = null;
+}
+
+@if (Session["LogedUserFullname"] != null)
+{
+    <text>
+        @Session["LogedUserFullname"].ToString()
+    </text>
+}
+else
+{
+    <div class="box_search">
+        <div class="header-center"> ĐĂNG NHẬP </div>
+        @using (Html.BeginForm("LoginUserComplete", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            if (@ViewBag.Message != null)
+            {
+                <div style="border: 1px solid red">
+                    @ViewBag.Message
+                </div>
+            }
+            <table>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">@Html.Label("Tên đăng nhập ")</td>
+                </tr>
+                <tr>
+                    <td colspan ="2">@Html.TextBoxFor(a => a.username)</td>
+                    <td style="color: red">@Html.ValidationMessageFor(a => a.username)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.Label("Mật khẩu ")</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.PasswordFor(a => a.password)</td>
+                    <td style="color: red">@Html.ValidationMessageFor(a => a.password)</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Đăng nhập" /><input type="reset" value="Nhập lại" /></td>
+                </tr>                
+            </table>
+            @Html.ActionLink("Đăng ký người dùng", "RegisterUser", "Account")
+        }
+    </div>
+}

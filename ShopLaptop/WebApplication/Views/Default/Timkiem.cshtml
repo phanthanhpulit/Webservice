@@ -1,0 +1,30 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.SanPham
+@{
+    ViewBag.Title = "Search";
+    Layout = null;
+}
+
+<div class="box_search1">
+    <div class="header-center"> TÌM KIẾM </div>
+    @using (Html.BeginForm("TimkiemResult", "Default", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <table style="width: 217px">
+            <tr></tr>
+            <tr>
+                <td colspan="2">@Html.Label("Từ khóa: ")</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">@Html.TextBoxFor(a => a.tensp)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="float: right"><input type="reset" value="Nhập lại" /></td>
+                <td style="float: right"><input type="submit" value="Tìm" /></td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Default.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/styles_menuleft.css" rel="stylesheet" />
+    <script src="~/Content/script.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <div class="logo">
+                <img src="~/Images/logo.png" />
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div id='cssmenu'>
+            <ul>
+                <li><a href="/Default">TRANG CHỦ</a></li>
+                <li><a href="">GIỚI THIỆU</a></li>
+                <li><a href='#'>TIN TỨC</a></li>
+                <li><a href='#'>LIÊN HỆ</a></li>
+                <li style="float: right; margin: auto"></li>
+            </ul>
+        </div>
+        <div class="head_menu">
+            <div class="head_list">
+                <div class="header-center">Danh mục sản phẩm</div>
+                <div class="sidebarmenu">
+                    @{Html.RenderAction("Menu", "Default");}	
+                </div>
+            </div>
+            
+            <div class="banner_main">
+                <div class="image_slider"><img src="../../Images/banner3.jpg" /></div>
+                <div class="banner"><img src="../../Images/banner1.png"/></div>
+            </div>
+        </div>
+        <div class="content_main">
+            <div class="content_left">
+                @{Html.RenderAction("Timkiem", "Default");}
+                @{if (Session["LogedUserFullname"] != null)
+                 { Html.RenderAction("AfterLoginUser", "Account"); }
+                 else
+                 { Html.RenderAction("LoginUser", "Account"); }
+                 }
+                <div>
+                    @{Html.RenderAction("Cart", "ShoppingCart");}
+                </div>
+            </div>            
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="footer">
+            <p>Website: Cửa hàng laptop AD <br /></p>
+            <p>Địa chỉ: 273 An Dương Vương, P12, Q5<br /></p>
+            <p>Điện thoại: 01687033450 <br /></p>
+            <p>Thiết kế bởi: Nhóm 14 Nguyễn Anh Dũng - Phan Thanh Pulit </p><br />
+            <a href="/Admin/Login">Trang quảng trị</a>
+        </div>
+    </div>
+</body>
+</html>

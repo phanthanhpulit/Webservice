@@ -1,0 +1,5 @@
+E:\HOC TAP\HOC KY 1 NAM HOC 2014 - 2015\LAP TRINH HIEN DAI\ShopLaptop\WCFService\bin\WCFService.dll.config
+E:\HOC TAP\HOC KY 1 NAM HOC 2014 - 2015\LAP TRINH HIEN DAI\ShopLaptop\WCFService\bin\WCFService.dll
+E:\HOC TAP\HOC KY 1 NAM HOC 2014 - 2015\LAP TRINH HIEN DAI\ShopLaptop\WCFService\bin\WCFService.pdb
+E:\HOC TAP\HOC KY 1 NAM HOC 2014 - 2015\LAP TRINH HIEN DAI\ShopLaptop\WCFService\obj\Debug\WCFService.dll
+E:\HOC TAP\HOC KY 1 NAM HOC 2014 - 2015\LAP TRINH HIEN DAI\ShopLaptop\WCFService\obj\Debug\WCFService.pdb

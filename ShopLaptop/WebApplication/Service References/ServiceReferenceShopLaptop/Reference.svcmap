@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6b5b50cd-d75a-4866-a186-2e868fb77e7e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Newtonsoft.Json" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:38836/ServiceShopLaptop.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceShopLaptop.xsd" MetadataType="Schema" ID="2549063d-c520-4193-b106-7e258097e60b" SourceId="1" SourceUrl="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceShopLaptop1.xsd" MetadataType="Schema" ID="6b165b77-ca18-4dfc-8f56-7e7907f6a193" SourceId="1" SourceUrl="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceShopLaptop2.xsd" MetadataType="Schema" ID="c83e8311-2b37-474f-b3c8-c614536a60ae" SourceId="1" SourceUrl="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceShopLaptop3.xsd" MetadataType="Schema" ID="108e15b4-d16e-4fa8-9a4c-fe781579755f" SourceId="1" SourceUrl="http://localhost:38836/ServiceShopLaptop.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceShopLaptop.wsdl" MetadataType="Wsdl" ID="776f27c9-2d6b-4a10-8106-3904d8cb29b1" SourceId="1" SourceUrl="http://localhost:38836/ServiceShopLaptop.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

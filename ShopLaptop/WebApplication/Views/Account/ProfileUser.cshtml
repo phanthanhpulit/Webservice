@@ -1,0 +1,17 @@
+﻿@model WebApplication.ServiceReferenceShopLaptop.KhachHang
+@{
+    ViewBag.Title = "ProfileUser";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<div class="content_right">
+    <div class="header-center">THÔNG TIN CHI TIẾT KHÁCH HÀNG</div>
+    <p>Tên đăng nhập: @Html.Raw(Model.username)</p>
+    <p>Mật khẩu: @Html.Raw(Model.password)</p>
+    <p>Họ tên: @Html.Raw(Model.hoten)</p>
+    <p>Giới tính: @Html.Raw(Model.gioitinh)</p>
+    <p>Ngày sinh: @Html.Raw(Model.namsinh)</p>
+    <p>Địa chỉ: @Html.Raw(Model.diachi)</p>
+    <p>Số điện thoại: @Html.Raw(Model.sodienthoai)</p>
+    @Html.ActionLink("Sửa thông tin người dùng", "EditUser", "Account", new { id = Model.username.Trim(), gioitinh = Model.gioitinh.Trim() }, null)
+</div>

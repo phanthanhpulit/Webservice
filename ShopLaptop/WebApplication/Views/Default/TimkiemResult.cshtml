@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication.ServiceReferenceShopLaptop.SanPham>
+
+@{
+    ViewBag.Title = "Tìm kiếm";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<div class="content_main">
+    <div class="content_right">
+        <div class="header-center">KẾT QUẢ TÌM KIẾM</div>
+        <div>
+            @if (Model.Count() < 1)
+            {
+                <div class="noidunggiua" style="padding:10px;">
+                    Kết quả tìm kiếm với từ khóa: <b>@Html.Raw(ViewBag.Tensp)</b><br /><br />
+                    <b>@Html.Raw(ViewBag.KhongTimThay)</b>
+                </div>
+            }
+            else
+            {
+                <div class="noidunggiua" style="padding:10px;">
+                    Kết quả tìm kiếm với từ khóa: <b>@Html.Raw(ViewBag.Tensp)</b>
+                </div>
+                <div>
+                    @foreach (var p in Model)
+                    {
+                        <div class="product-container">
+                            <a href="/Default/ChitietSP?masp=@Html.DisplayFor(item => p.masp).ToString().Trim()"><div class="product-container-image"><img src="@Html.DisplayFor(item => p.hinh)" /></div></a>
+                            <div><a href="/Default/ChitietSP?masp=@Html.DisplayFor(item => p.masp).ToString().Trim()" /><b>@Html.DisplayFor(item => p.tensp)</b></div>
+                            <div style="color:#FF0000">Giá: @string.Format("{0:0,0 VNĐ}", p.gia).Replace(",", ".")</div>
+                            <button name="chitiet" value="Chi tiết">@Html.ActionLink("Chi tiết", "ChitietSP", "Default", new { masp = p.masp.Trim() }, null)</button>
+                            <button name="chonmua" value="Chọn mua">@Html.ActionLink("Chọn mua", "AddToCart", "ShoppingCart", new { id = p.masp.Trim(), gia = p.gia }, null)</button>
+                            <a href="/Default/Chitietsanpham?masp=@Html.DisplayFor(modelItem => p.masp).ToString().Trim()"> <div class="chitiet"> </div></a>
+                        </div>
+                    }
+                    <div class="clear"></div>
+                    <div>@{Html.RenderAction("PhanTrang", "PageList", new { currentpage = "Default/timkiem?id=" + @ViewBag.Tensp, totalpages = ViewBag.TotalPages });}</div>
+                    <div style="text-align:right; padding:6px; color:#FF3333; font-size:14px; height:22px"><a href="#top">>>Về đầu trang</a></div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

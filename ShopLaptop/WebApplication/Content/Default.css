@@ -1,0 +1,130 @@
+﻿body                {background: #fcfcfc; padding: 0 0; margin: 0 0; font-family: Arial,Helvetica, sans-serif; font-size: 12px}
+.main               {width: 1001px; min-height: 1300px; margin: 0 auto; padding: 0; background: #fcfcfc}
+.head               {width: 1001px; height: 130px; margin: 0;padding: 0; background: #d0e9fd}
+.hr                 {width: 1001px; height: 1px; margin: 2px 0 2px; background: #cccccc}
+.head_menu          {width: 1001px; height: 352px; margin: 0; padding: 0; background: #fcfcfc}
+.head_list          {width: 222px; height: 352px; margin: 0; padding: 0; float: left; background: #f0f0f0; border-radius: 5px 5px 0px 0px;}
+.image_slider       {width: 533px; height: 352px; margin: 0; padding: 0; border: solid 1px Black; float: left}
+.banner             {width: 226px; height: 352px; margin: 0; padding: 0; float: right}
+.banner_main        {width: 769px; height: 352px; margin: 0; padding: 0; background: #fcfcfc; float: right}
+.content_main       {width: 1001px; min-height: 985px; margin: 10px 0 0 0; padding: 0}
+.content_left       {width: 219px; min-height: 984px; margin: 0; padding: 0; float: left}
+.content_right      {width: 769px; min-height: 984px; margin: 0; padding: 0; border: 1px #d0e9fd solid; float: right; border-radius: 5px}
+.footer             {width: 1001px; height: 130px; margin: 0; padding: 0}
+.logo               {width: 160px; height: 120px; margin: 5px 0px 5px 100px; float: left}
+.ten                {width: 222px; height: 30px; margin: 0; background: #d0e9fd; text-align: center; font-family: Arial; vertical-align: middle}
+DIV#categories      {width: 222px; margin: 0; background: #d0e9fd;}
+DIV#categories A    {font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; display: block; text-decoration: none; padding: .6em; color: Black; border-bottom: 1px solid #ff6a00;}
+DIV#categories A.selected { background-color: #666; color: White; } 
+DIV#categories A:hover { background-color: #CCC; }
+DIV#categories A.selected:hover {background-color: #666;}
+.product-container  {width: 226px; height: 280px; border: 1px solid #d0e9fd; margin: 17px 8px 3px 17px; text-align: center; float: left; border-radius: 5px}
+.product-container-image{width: 200px; height: 178px; margin: 5px auto; text-align: center}
+.product-container-image img{max-width: 200px; max-height: 178px; border: 0}
+.product-container-image img:hover{border: 1px solid #d0e9fd}
+.product-container a{color: #000000; text-decoration: none}
+.product-container a:hover{color: red}
+.product-container p{color: red; margin: 0; padding: 5px 0 0 0}
+.header-center
+{
+	text-transform:uppercase;
+	border-radius: 4px 4px 0px 0px;
+	background:#d0e9fd;
+	text-align:center;
+	color: #000000;height:30px;font: bold 15px Arial, Helvetica, sans-serif;line-height:30px;	
+}
+.clear
+{
+	clear:both;
+}
+.sidebarmenu ul
+{
+	margin: auto;
+	padding: 0;
+	list-style-type: none;
+	font: 13px Arial, Helvetica, sans-serif;
+	width: 221px; /*chiều rộng của menu chinh*/
+    float: right;
+}
+.sidebarmenu ul li
+{
+	position: relative;
+	
+}
+/* cap do menu link toi style */
+.sidebarmenu ul li a
+{
+	display: block;
+	overflow: auto; /*hieu luc bo tri trong IE7 */
+	color: white;
+	text-decoration: none;
+	padding: 9px;
+	padding-left:20px;
+	border-bottom: 3px solid #ffffff;
+	border-right: 3px solid #ffffff;
+}
+.sidebarmenu ul li a:link, .sidebarmenu ul li a:active
+{
+	background-color: #348db7;/* background */
+}
+/*.sidebarmenu ul li a:visited
+{
+    background-color: #9bd5f5;
+}*/
+.sidebarmenu ul li a:hover
+{
+	background-color: #9bd5f5;
+}
+/*Sub level menu items */
+.sidebarmenu ul li ul
+{
+	/*position: absolute;
+	position:relative;*/
+	z-index:1000;
+	width: 130px; /*Chiều rộng Sub Menu Items 150*/
+	top: 0;
+	visibility: hidden;
+    
+}
+.sidebarmenu a.subfolderstyle
+{
+	background: url() no-repeat 97% 50%;
+}
+/* Holly Hack for IE \*/
+* html .sidebarmenu ul li { float: left; height: 1%; }
+* html .sidebarmenu ul li a { height: 1%; }
+
+.box_detail_top     {width: 769px; min-height: 220px; margin: 0; padding: 0; border: 1px #d0e9fd solid; border-radius: 5px}
+.box_detail_top_content{width: 400px; height: 150px; margin: 0; padding: 0; float: right}
+.box_detail_image   {width: 200px; height: 160px; margin: 10px 10px; text-align: center; float: left}
+.box_detail_image img{max-width: 200px; max-height: 160px; border: 0}
+.box_detail_center{width: 769px; height: 330px; margin: 5px 0px; padding: 0; border: 1px #d0e9fd solid; border-radius: 5px}
+.box_detail_bottom{width: 769px; height: 415px; margin: 5px 0px 0px; padding: 0; border: 1px #d0e9fd solid; border-radius: 5px}
+.box_detail_center table{border: 1px #d0e9fd solid; border-radius: 5px; width: 768px}
+.box_detail_center tr{border: 1px #d0e9fd solid}
+.box_detail_center td{border: 1px #d0e9fd solid; width: auto}
+.box_search     {width: 217px; height: 200px; border: 1px #d0e9fd solid; border-radius: 5px; margin: 10px 0px}
+.box_search1    {width: 217px; height: 120px; border: 1px #d0e9fd solid; border-radius: 5px}
+.box_image      {width: 199px; height: 120px; margin: 2px 9px; text-align: center}
+.box_image img  {max-width: 200px; max-height: 120px; text-align: center}
+.noidunggiua
+{
+	border-radius: 0px 0px 4px 4px;
+	padding:5px 10px 5px 10px;
+	/*background-color:#fbd9e9;*/
+	text-align: left;
+	margin-bottom:5px;
+	border: 0px ;
+	border-width: thin;
+}
+.noidunggiua
+{
+	padding:10px 10px 5px 10px;
+	margin-bottom:5px;	
+	color:#336699;
+}
+.box_cart     {width: 217px; height: 200px; border: 1px #d0e9fd solid; border-radius: 5px; text-align: center}
+.content_right table{border: 1px #d0e9fd solid; border-radius: 5px; width: 768px}
+.content_right  td{border: 1px #d0e9fd solid}
+.content_right tr{border: 1px #d0e9fd solid}
+.content-right th{border: 1px #d0e9fd solid}
